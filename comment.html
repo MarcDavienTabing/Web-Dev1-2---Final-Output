@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comments - Meteor Meat</title>
+
+    <link rel="stylesheet" href="comments.css">
+</head>
+
+<body>
+
+    <div class="comments-container">
+
+        <!-- Navigation -->
+        <div class="card nav">
+            <nav>
+                <h1>Meteor Meat!</h1>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="order.html">Order</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="comments.html">Comments</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Page Header -->
+        <div class="card header">
+            <h1>Customer Comments</h1>
+            <p>We would love to hear your thoughts!</p>
+        </div>
+
+        <!-- Comment Form -->
+        <div class="card form-card">
+
+            <h2>Leave a Comment</h2>
+
+            <form id="commentForm">
+
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="comment">Your Comment</label>
+                <textarea
+                    id="comment"
+                    placeholder="Share your experience with Meteor Meat..."
+                    required
+                ></textarea>
+
+                <button type="submit" id="submitBtn">
+                    Submit Comment
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </div>
+
+        <!-- Display Comments -->
+        <div class="card display-card">
+
+            <h2>What People Are Saying</h2>
+
+            <p id="loading">Loading comments...</p>
+
+            <div id="commentList"></div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Meteor Meat! All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="comments.js"></script>
+
+</body>
+</html>
