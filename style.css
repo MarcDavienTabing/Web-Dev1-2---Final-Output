@@ -177,3 +177,359 @@ a {
     "card-1"
     "card-2"
 }
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.grid-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: clamp(10px, 2vw, 25px);
+}
+
+.card {
+    min-width: 0;
+    padding: clamp(12px, 2vw, 24px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav h1 {
+    margin: 10px;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav ul a {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 16px;
+}
+
+#Home .grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-areas:
+        "card-1 card-1 card-1"
+        "card-2 card-2 card-2"
+        "card-3 card-4 card-5"
+        "card-6 card-6 card-6";
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero img {
+    float: none;
+    width: 45%;
+    max-width: 550px;
+    margin: 0;
+    padding: 10px;
+    object-fit: contain;
+}
+
+.hero .content {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.featured img {
+    display: block;
+    width: 90%;
+    max-width: 350px;
+    margin: 10px auto;
+    object-fit: contain;
+}
+
+#Menu .grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+        "card-1 card-1 card-1"
+        "card-2 card-2 card-2"
+        "card-3 card-4 card-5"
+        "card-6 card-6 card-6"
+        "card-7 card-8 card-9"
+        "card-10 card-10 card-10"
+        "card-11 card-12 card-13";
+}
+
+.product img {
+    display: block;
+    width: 90%;
+    max-width: 350px;
+    margin: 10px auto;
+    object-fit: contain;
+}
+
+#order .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-areas:
+        "card-1 card-1"
+        "card-2 card-2"
+        "card-3 card-4"
+        "card-5 card-6"
+        "card-7 card-8"
+        "card-9 card-9"
+        "card-10 card-10";
+}
+
+#order input,
+#order select {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#order button {
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+#about .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-areas:
+        "card-1 card-1"
+        "card-2 card-3"
+        "card-4 card-5";
+}
+
+
+#contact .grid-container {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "card-1"
+        "card-2";
+}
+
+@media screen and (max-width: 850px) {
+
+    #Home .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+            "card-1 card-1"
+            "card-2 card-2"
+            "card-3 card-4"
+            "card-5 card-5"
+            "card-6 card-6";
+    }
+
+    #Menu .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+            "card-1 card-1"
+            "card-2 card-2"
+            "card-3 card-4"
+            "card-5 card-5"
+            "card-6 card-6"
+            "card-7 card-8"
+            "card-9 card-9"
+            "card-10 card-10"
+            "card-11 card-12"
+            "card-13 card-13";
+    }
+
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 5px;
+    }
+
+    nav ul li {
+        gap: 5px;
+    }
+
+    nav ul a {
+        padding: 10px 12px;
+    }
+
+    .hero img {
+        width: 45%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .grid-container {
+        padding: 8px;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        width: 100%;
+        padding: 5px;
+    }
+
+    nav ul li {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    #Home .grid-container {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4"
+            "card-5"
+            "card-6";
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hero .content {
+        min-width: 0;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .featured img {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    #Menu .grid-container {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4"
+            "card-5"
+            "card-6"
+            "card-7"
+            "card-8"
+            "card-9"
+            "card-10"
+            "card-11"
+            "card-12"
+            "card-13";
+    }
+
+    .product img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #order .grid-container {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4"
+            "card-5"
+            "card-6"
+            "card-7"
+            "card-8"
+            "card-9"
+            "card-10";
+    }
+
+    #order input:not([type="radio"]),
+    #order select {
+        width: 100%;
+    }
+
+    #about .grid-container {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4"
+            "card-5";
+    }
+
+    #contact .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+}
