@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
 }
 
-.comments-container {
+.comments-container { 
     display: grid;
     gap: 20px;
     padding: 15px;
