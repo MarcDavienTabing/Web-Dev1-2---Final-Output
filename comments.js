@@ -4,12 +4,6 @@ const commentForm = document.getElementById("commentForm");
 const commentList = document.getElementById("commentList");
 const message = document.getElementById("message");
 
-// Demo comments shown when the page opens
-const comments = [
-    { username: "burgerfan_21", body: "The Beef Bacon Burger is huge. Worth every peso!" },
-    { username: "maria.g", body: "Crispy fries and the chocolate milkshake was so good." },
-    { username: "kuya_rico", body: "Fast pickup order, and the burger was still hot." }
-];
 
 // Build one comment and add it to the top of the list
 function displayComment(username, body) {
