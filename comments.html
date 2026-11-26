@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,6 +38,21 @@
             <p>We would love to hear your thoughts!</p>
         </div>
 
+        <!-- Weather (Open-Meteo public API) -->
+        <div class="card weather-card">
+            <h2>Weather in Imus, Cavite</h2>
+            <p id="weatherStatus">Loading weather...</p>
+            <div id="weatherInfo" hidden>
+                <p class="weather-temp"><span id="weatherTemp"></span></p>
+                <p id="weatherDesc"></p>
+                <p class="weather-details">
+                    Feels like <span id="weatherFeels"></span> &middot;
+                    Humidity <span id="weatherHumidity"></span> &middot;
+                    Wind <span id="weatherWind"></span>
+                </p>
+            </div>
+        </div>
+
         <!-- Comment Form -->
         <div class="card form-card">
 
@@ -46,19 +60,13 @@
 
             <form id="commentForm">
 
-                <label for="name">Your Name</label>
+                <label for="username">Username</label>
                 <input
                     type="text"
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                >
-
-                <label for="email">Email Address</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email"
+                    id="username"
+                    placeholder="Enter a username"
+                    maxlength="30"
+                    autocomplete="off"
                     required
                 >
 
@@ -66,16 +74,17 @@
                 <textarea
                     id="comment"
                     placeholder="Share your experience with Meteor Meat..."
+                    maxlength="500"
                     required
                 ></textarea>
 
                 <button type="submit" id="submitBtn">
-                    Submit Comment
+                    Post Comment
                 </button>
 
             </form>
 
-            <p id="message"></p>
+            <p id="message" role="status"></p>
 
         </div>
 
@@ -84,15 +93,13 @@
 
             <h2>What People Are Saying</h2>
 
-            <p id="loading">Loading comments...</p>
-
             <div id="commentList"></div>
 
         </div>
 
         <!-- Footer -->
         <footer>
-            <p>© 2026 Meteor Meat! All Rights Reserved.</p>
+            <p>&copy; 2026 Meteor Meat! All Rights Reserved.</p>
         </footer>
 
     </div>
