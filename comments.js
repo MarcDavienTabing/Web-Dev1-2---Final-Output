@@ -4,6 +4,10 @@ const commentForm = document.getElementById("commentForm");
 const commentList = document.getElementById("commentList");
 const message = document.getElementById("message");
 
+// Demo comments shown when the page opens
+const comments = [
+];
+
 // Build one comment and add it to the top of the list
 function displayComment(username, body) {
     const commentDiv = document.createElement("div");
